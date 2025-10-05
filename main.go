@@ -1,6 +1,7 @@
 package main
 
 import (
+	"context"
 	"fmt"
 	"os"
 
@@ -20,10 +21,12 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
-	completion, err := llm.Call(nil, "Hello, world!")
+
+	completion, err := llm.Call(context.Background(), "Hello, world!")
 	if err != nil {
 		panic(err)
 	}
+
 	fmt.Println(completion)
 
 }
