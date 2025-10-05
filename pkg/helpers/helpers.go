@@ -1,4 +1,4 @@
-package main
+package helpers
 
 import (
 	"bufio"
@@ -6,8 +6,8 @@ import (
 	"strings"
 )
 
-// loadDotEnv loads environment variables from a .env file.
-func loadDotEnv(path string) error {
+// LoadDotEnv loads environment variables from a .env file.
+func LoadDotEnv(path string) error {
 	f, err := os.Open(path)
 	if err != nil {
 		return err
